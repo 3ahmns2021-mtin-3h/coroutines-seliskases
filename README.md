@@ -1,7 +1,7 @@
 # Coroutines
 
 ### What are coroutines? 
-A coroutine is a function that can suspend its execution (yield) until the given YieldInstruction finishes. Thus, coroutines can execute code over a certain number of frames.
+A coroutine is a function that can suspend its execution until the given YieldInstruction has finished. Thus, coroutines can execute code over a certain number of frames.
 Coroutines stop after the GameObject from which it has been called is deactivated or destroyed.
 
 Yield indicates that the method is an iterator and that it’s going to execute over more than one frame, while return, like in a regular function, terminates execution at that point and passes control back to the calling method.
@@ -13,7 +13,7 @@ There are different types of yield instructions:
 - yield return WaitWhile(bool predicate): waits for a delegate to be false before proceeding
 - yield return WaitForEndOfFrame(): Waits until Unity has rendered every Camera and UI element, just before actually displaying the frame
 
-### Advantages of coroutines 
+### Advantages of coroutines:
 Executing code consecutively using Coroutines is simple and intuitive. Using the yield keyword, Coroutines can be organized as "To-Do Lists" without having to implement countless if-statements. Respectively, implementing design patterns like State Machines only become practical by using coroutines.
 
 ### Usecases of coroutines: 
